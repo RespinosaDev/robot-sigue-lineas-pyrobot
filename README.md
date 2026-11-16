@@ -1,16 +1,14 @@
 # Robot sigue-líneas con visión · Pyrobot + Stage
 
-Controlador de un robot móvil en **Python** para el simulador **Stage**, sobre **Pyrobot** y **OpenCV**. Con la cámara frontal el robot sigue una línea azul, detecta intersecciones y gira hacia donde indica una **flecha roja**, esquiva obstáculos con los **sonares** y **reconoce las señales** que encuentra en el recorrido (hombre, mujer, escalera, teléfono).
+Es el controlador de un robot móvil, hecho en **Python** con **Pyrobot** y **OpenCV**, para el simulador **Stage**. Con la cámara frontal el robot sigue una línea azul, detecta los cruces y gira hacia donde le indica una **flecha roja**. Además esquiva obstáculos con los **sonares** y **reconoce las señales** que se va encontrando (hombre, mujer, escalera y teléfono).
 
-> 🎓 **Proyecto académico**: demo final de la asignatura *Robótica y Percepción Computacional* (Grado en Ingeniería Informática)<br>
-> Universidad Politécnica de Madrid · Campus de Montegancedo<br>
-> 👥 Trabajo en grupo (3 personas)
+Fue la demo final de la asignatura *Robótica y Percepción Computacional* (Grado en Ingeniería Informática, Universidad Politécnica de Madrid). La hicimos en un grupo de 3 personas.
 
 ---
 
 ## Arquitectura
 
-El código separa **percepción** y **control**:
+El código está dividido en dos partes, **percepción** y **control**:
 
 ```
 cámara ──► vision.py (Percepcion.procesar) ──► Resultado ──► BrainFinalExam.py (decidir) ──► move(avance, giro)
